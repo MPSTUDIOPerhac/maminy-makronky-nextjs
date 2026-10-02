@@ -1,30 +1,33 @@
 # Máminy Makronky — Next.js verze webu
 
-Tohle je stejný web jako předchozí statická verze (HTML/CSS/JS), jen
-přepsaný do **Next.js**, aby šel jednoduše nahrát na GitHub a nasadit
-přes **Vercel**.
+Web běží na **Next.js**, aby šel jednoduše nahrát na GitHub a nasadit
+přes **Vercel**. Obsahuje i jednoduchou **administraci** (`/admin`),
+přes kterou si majitel/ka může sám/sama doplňovat nabídku, ceny,
+příchutě a fotky — bez nutnosti sahat do kódu.
 
 ## Co je uvnitř
 
 ```
 maminy-makronky-nextjs/
 ├── app/
-│   ├── layout.js         → společná kostra stránky (fonty, <head>)
-│   ├── globals.css       → veškeré styly (1:1 stejné jako dřívější css/style.css)
-│   ├── page.js           → hlavní stránka (hero, příběh, galerie náhled,
-│   │                        objednávka na zakázku, prodejna, recenze, Instagram)
-│   └── galerie/
-│       └── page.js       → podstránka s celou galerií (filtr + lightbox)
-├── components/           → React komponenty (menu, hero carousel,
-│                            objednávkový formulář, galerie s filtrem…)
-├── lib/gallery-data.js   → seznam všech 99 fotek v galerii (kategorie, popisky…)
-├── public/images/        → logo, hero bannery a všech 99 fotek z galerie
+│   ├── layout.js           → společná kostra stránky (fonty, <head>)
+│   ├── globals.css         → veškeré styly
+│   ├── page.js             → hlavní stránka
+│   ├── nabidka/page.js     → stránka s nabídkou a ceníkem (čte content/menu.json)
+│   ├── galerie/page.js     → galerie fotek (čte content/gallery.json)
+│   ├── admin/page.js       → administrace (přihlášení + nástěnka)
+│   └── api/admin/…         → serverové funkce, které admin panel používá
+├── components/             → React komponenty (menu, hero carousel,
+│                              objednávkový formulář, galerie, administrace…)
+├── content/
+│   ├── menu.json           → nabídka a ceník (admin to upravuje)
+│   └── gallery.json        → fotky v galerii (admin to upravuje)
+├── lib/
+│   ├── contentStore.js     → ukládání obsahu (přes GitHub API, viz níže)
+│   └── auth.js             → přihlášení do administrace
+├── public/images/          → logo, hero bannery a fotky z galerie/nabídky
 └── package.json
 ```
-
-Vizuálně a funkčně je web úplně stejný jako předtím — jen běží na
-Next.js, takže ho může hostovat Vercel (nebo jakýkoliv jiný Node.js
-hosting) a v budoucnu se dá snadno rozšiřovat.
 
 ## Jak to nahrát na GitHub
 
@@ -44,10 +47,10 @@ hosting) a v budoucnu se dá snadno rozšiřovat.
    git push -u origin main
    ```
 
-_Pozn.: Pokud nemáš git nainstalovaný nebo nechceš pracovat v
-terminálu, GitHub umí nahrání složky i přes web (tlačítko „Add file“ →
-„Upload files“ v novém repu) — jen tam pak nahraj úplně všechny soubory
-a složky z tohoto balíčku._
+_Pozn.: Pro nahrání radši použij **GitHub Desktop** (desktop.github.com)
+nebo terminálové `git` příkazy výše — webové „Add file → Upload files“
+u víc souborů/složek najednou často rozbije strukturu složek a projekt
+pak nejde nasadit. GitHub Desktop tenhle problém nemá._
 
 ## Jak to nasadit na Vercel
 
@@ -57,17 +60,71 @@ a složky z tohoto balíčku._
 4. Vercel automaticky pozná, že jde o Next.js projekt — nic není
    potřeba měnit, stačí kliknout **„Deploy“**.
 5. Za chvíli dostaneš live odkaz (např. `maminy-makronky.vercel.app`),
-   na kterém web běží. Při každém dalším `git push` do `main` větve se
-   web na Vercelu automaticky znovu nasadí.
+   na kterém web běží. Při každém dalším `git push` do `main` větve (nebo
+   při uložení změny přes administraci, viz níže) se web na Vercelu
+   automaticky znovu nasadí.
 6. V nastavení projektu na Vercelu (**Settings → Domains**) si pak
    můžeš přidat vlastní doménu (např. `maminymakronky.cz`), pokud ji
    vlastníš.
 
+Tenhle web svou velikostí spadá do **bezplatného tarifu Vercelu** —
+hosting samotný je tedy zdarma, dokud nejde o extrémně vysokou
+návštěvnost. Platit se případně bude jen registrace vlastní domény
+(u běžného registrátora, nezávisle na Vercelu).
+
+## Administrace (`/admin`) — nastavení
+
+Administrace umožňuje bez znalosti kódu:
+- přidávat/upravovat/mazat položky v **Nabídce a ceníku**,
+- přidávat/mazat fotky v **galerii**,
+- vše včetně nahrávání fotek přímo z počítače.
+
+Funguje tak, že každá uložená změna založí normální **git commit** do
+repozitáře na GitHubu — Vercel si ho všimne a web do cca půl minuty
+znovu nasadí s novým obsahem. Žádná vlastní databáze se nikde neběží.
+
+Aby to fungovalo na nasazeném webu (ne jen lokálně u tebe na počítači),
+je potřeba na Vercelu nastavit pár proměnných prostředí:
+
+1. **Vytvoř si GitHub Personal Access Token** (jen pro tenhle repozitář):
+   - Na GitHubu: `Settings` (tvého účtu, ne repozitáře) → `Developer settings`
+     → `Personal access tokens` → `Fine-grained tokens` → `Generate new token`.
+   - `Repository access` → `Only select repositories` → vyber `maminy-makronky`.
+   - `Permissions` → `Contents` → nastav na **Read and write**.
+   - Vygeneruj a **zkopíruj token** (zobrazí se jen jednou).
+2. **Na Vercelu** otevři projekt → `Settings` → `Environment Variables` a přidej:
+   | Název | Hodnota |
+   |---|---|
+   | `GITHUB_TOKEN` | token z kroku 1 |
+   | `GITHUB_OWNER` | tvoje uživatelské jméno/organizace na GitHubu (např. `MPSTUDIOPerhac`) |
+   | `GITHUB_REPO` | název repozitáře (např. `makronky`) |
+   | `GITHUB_BRANCH` | `main` |
+   | `ADMIN_PASSWORD` | heslo, kterým se bude přihlašovat do `/admin` |
+   | `SESSION_SECRET` | libovolný náhodný dlouhý řetězec (jen na podepsání přihlášení) |
+3. Po přidání proměnných klikni na **Redeploy** (v záložce Deployments),
+   ať se projeví.
+4. Administrace pak poběží na `https://TVOJE-DOMENA/admin`.
+
+**Bez těchto proměnných admin panel na Vercelu nebude fungovat** (přihlášení
+vrátí chybu, že chybí `ADMIN_PASSWORD`) — je to záměrná pojistka, aby
+nešlo omylem nasadit administraci bez hesla.
+
+### Lokální vyzkoušení administrace
+
+Při spuštění `npm run dev` u sebe na počítači bez nastavených `GITHUB_*`
+proměnných se admin panel přepne do „lokálního režimu“ — změny se rovnou
+zapisují do souborů na disku (`content/menu.json`, `content/gallery.json`,
+`public/images/...`), ať si administraci můžeš v klidu vyzkoušet, aniž bys
+musel/a mít po ruce GitHub token. Stačí mít nastavené alespoň heslo:
+
+```bash
+ADMIN_PASSWORD=test1234 npm run dev
+```
+
 ## Kontaktní formulář (sekce „Na zakázku“)
 
-Stejně jako v předchozí verzi je formulář připravený na bezplatnou
-službu **Web3Forms**, která pošle poptávku rovnou na e-mail, bez
-vlastního serveru.
+Formulář je připravený na bezplatnou službu **Web3Forms**, která pošle
+poptávku rovnou na e-mail, bez vlastního serveru.
 
 Nastavení zabere 2 minuty:
 
@@ -85,7 +142,6 @@ Nastavení zabere 2 minuty:
 
 Dokud tam klíč nebude, formulář funguje jen „naoko“ (ukáže hlášku, že
 zatím není napojený), ať si můžeš vyzkoušet vzhled a validaci polí.
-Jakmile budeš mít klíč, klidně mi ho pošli a doplním ho rovnou já.
 
 ## Co je ještě potřeba doplnit (označeno `TODO` přímo v kódu)
 
@@ -118,17 +174,24 @@ Web pak poběží na `http://localhost:3000`.
 ## Hero bannery
 
 Oba bannery v carouselu na homepage (`hero-basic.jpg` a `hero-xmas.jpg`)
-už jsou nahrazené reálnými fotkami — najdeš je v `public/images/`.
-Pokud budeš chtít v budoucnu banner vyměnit, stačí nahradit stejnojmenný
-soubor v `public/images/` novou fotkou (ideálně podobného poměru stran,
-cca 2200×905 px) a případně doladit `background-position` v
+jsou reálné fotky — najdeš je v `public/images/`. Pokud budeš chtít
+v budoucnu banner vyměnit, stačí nahradit stejnojmenný soubor v
+`public/images/` novou fotkou (ideálně podobného poměru stran, cca
+2200×905 px) a případně doladit `background-position` v
 `app/globals.css` (třídy `.hero-slide.slide-basic` a `.hero-slide.slide-xmas`).
+
+## Nabídka a ceník
+
+Stránka `/nabidka` zobrazuje kompletní nabídku (název, kategorie, cena,
+příchutě, popis, fotka) — data jsou v `content/menu.json` a dají se
+pohodlně spravovat přes `/admin` (záložka „Nabídka a ceník“), bez
+nutnosti upravovat soubor ručně.
 
 ## Galerie
 
-Galerie (`/galerie`) obsahuje všech **99 reálných fotek** s filtrem
-podle kategorie (Klasické příchutě / Sezónní speciály / Zakázkové
-sestavy / Prodejna) a lightboxem po kliknutí na dlaždici. Data o fotkách
-(soubor, popisek, kategorie, poměr stran) jsou v `lib/gallery-data.js` —
-pokud budeš chtít galerii časem doplnit o nové fotky, stačí přidat
-soubor do `public/images/photos/` a nový záznam do tohoto souboru.
+Galerie (`/galerie`) obsahuje reálné fotky s filtrem podle kategorie
+(Klasické příchutě / Sezónní speciály / Zakázkové sestavy / Prodejna)
+a lightboxem po kliknutí na dlaždici. Data o fotkách jsou v
+`content/gallery.json` a dají se spravovat přes `/admin` (záložka
+„Galerie“) — přidání i smazání fotky, bez nutnosti upravovat soubor
+ručně nebo nahrávat fotky zvlášť na GitHub.

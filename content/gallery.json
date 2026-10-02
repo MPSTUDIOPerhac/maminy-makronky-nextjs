@@ -1,6 +1,6 @@
-// Automaticky vygenerováno z původní galerie.html — 99 fotek galerie.
-const galleryItems = [
+[
   {
+    "id": "g1",
     "cat": "prodejna",
     "label": "Ecléry a káva",
     "ar": "1/1.333",
@@ -9,6 +9,7 @@ const galleryItems = [
     "caption": "Ecléry a káva"
   },
   {
+    "id": "g2",
     "cat": "sezona",
     "label": "Velikonoční balíčky",
     "ar": "1/1.333",
@@ -17,6 +18,7 @@ const galleryItems = [
     "caption": "Velikonoční balíčky"
   },
   {
+    "id": "g3",
     "cat": "klasika",
     "label": "Věž z makronek",
     "ar": "1/1.335",
@@ -25,6 +27,7 @@ const galleryItems = [
     "caption": "Věž z makronek"
   },
   {
+    "id": "g4",
     "cat": "zakazka",
     "label": "Na zakázku — slavnostní kompozice",
     "ar": "1/1.335",
@@ -33,6 +36,7 @@ const galleryItems = [
     "caption": "Na zakázku — slavnostní kompozice"
   },
   {
+    "id": "g5",
     "cat": "prodejna",
     "label": "Posezení na terase",
     "ar": "1/1.335",
@@ -41,6 +45,7 @@ const galleryItems = [
     "caption": "Posezení na terase"
   },
   {
+    "id": "g6",
     "cat": "sezona",
     "label": "Letní nanuky",
     "ar": "1/1.0",
@@ -49,6 +54,7 @@ const galleryItems = [
     "caption": "Letní nanuky"
   },
   {
+    "id": "g7",
     "cat": "klasika",
     "label": "Pistáciová náplň",
     "ar": "1/1.335",
@@ -57,6 +63,7 @@ const galleryItems = [
     "caption": "Pistáciová náplň"
   },
   {
+    "id": "g8",
     "cat": "zakazka",
     "label": "Firemní zakázka",
     "ar": "1/1.0",
@@ -65,6 +72,7 @@ const galleryItems = [
     "caption": "Firemní zakázka"
   },
   {
+    "id": "g9",
     "cat": "prodejna",
     "label": "U nás v prodejně",
     "ar": "1/1.0",
@@ -73,6 +81,7 @@ const galleryItems = [
     "caption": "U nás v prodejně"
   },
   {
+    "id": "g10",
     "cat": "sezona",
     "label": "Velikonoční kolekce",
     "ar": "1/1.25",
@@ -81,6 +90,7 @@ const galleryItems = [
     "caption": "Velikonoční kolekce"
   },
   {
+    "id": "g11",
     "cat": "klasika",
     "label": "Malinový dezert",
     "ar": "1/1.335",
@@ -89,6 +99,7 @@ const galleryItems = [
     "caption": "Malinový dezert"
   },
   {
+    "id": "g12",
     "cat": "zakazka",
     "label": "Věž na oslavu",
     "ar": "1/1.335",
@@ -97,6 +108,7 @@ const galleryItems = [
     "caption": "Věž na oslavu"
   },
   {
+    "id": "g13",
     "cat": "prodejna",
     "label": "Naše výloha",
     "ar": "1/1.333",
@@ -105,6 +117,7 @@ const galleryItems = [
     "caption": "Naše výloha"
   },
   {
+    "id": "g14",
     "cat": "sezona",
     "label": "Valentýnská nabídka",
     "ar": "1/1.333",
@@ -113,6 +126,7 @@ const galleryItems = [
     "caption": "Valentýnská nabídka"
   },
   {
+    "id": "g15",
     "cat": "klasika",
     "label": "Krémový dezert",
     "ar": "1/1.333",
@@ -121,6 +135,7 @@ const galleryItems = [
     "caption": "Krémový dezert"
   },
   {
+    "id": "g16",
     "cat": "zakazka",
     "label": "Dárkové balení",
     "ar": "1/1.002",
@@ -129,6 +144,7 @@ const galleryItems = [
     "caption": "Dárkové balení"
   },
   {
+    "id": "g17",
     "cat": "prodejna",
     "label": "Naše latte",
     "ar": "1/1.333",
@@ -137,6 +153,7 @@ const galleryItems = [
     "caption": "Naše latte"
   },
   {
+    "id": "g18",
     "cat": "sezona",
     "label": "Vánoční nabídka",
     "ar": "1/1.333",
@@ -145,6 +162,7 @@ const galleryItems = [
     "caption": "Vánoční nabídka"
   },
   {
+    "id": "g19",
     "cat": "klasika",
     "label": "S sušenými květy",
     "ar": "1/1.0",
@@ -153,6 +171,7 @@ const galleryItems = [
     "caption": "S sušenými květy"
   },
   {
+    "id": "g20",
     "cat": "zakazka",
     "label": "Firemní věž na zakázku",
     "ar": "1/1.333",
@@ -161,6 +180,7 @@ const galleryItems = [
     "caption": "Firemní věž na zakázku"
   },
   {
+    "id": "g21",
     "cat": "prodejna",
     "label": "Naše vitrína",
     "ar": "1/1.029",
@@ -169,6 +189,7 @@ const galleryItems = [
     "caption": "Naše vitrína"
   },
   {
+    "id": "g22",
     "cat": "sezona",
     "label": "Svátečně zdobená věž",
     "ar": "1/1.25",
@@ -177,6 +198,7 @@ const galleryItems = [
     "caption": "Svátečně zdobená věž"
   },
   {
+    "id": "g23",
     "cat": "klasika",
     "label": "Malinové řezy",
     "ar": "1/1.333",
@@ -185,6 +207,7 @@ const galleryItems = [
     "caption": "Malinové řezy"
   },
   {
+    "id": "g24",
     "cat": "zakazka",
     "label": "Otevřený dárkový box",
     "ar": "1/1.333",
@@ -193,6 +216,7 @@ const galleryItems = [
     "caption": "Otevřený dárkový box"
   },
   {
+    "id": "g25",
     "cat": "prodejna",
     "label": "U kávy",
     "ar": "1/1.333",
@@ -201,6 +225,7 @@ const galleryItems = [
     "caption": "U kávy"
   },
   {
+    "id": "g26",
     "cat": "sezona",
     "label": "Valentýnské srdíčka",
     "ar": "1/1.251",
@@ -209,6 +234,7 @@ const galleryItems = [
     "caption": "Valentýnské srdíčka"
   },
   {
+    "id": "g27",
     "cat": "klasika",
     "label": "Makronky s růží",
     "ar": "1/1.0",
@@ -217,6 +243,7 @@ const galleryItems = [
     "caption": "Makronky s růží"
   },
   {
+    "id": "g28",
     "cat": "zakazka",
     "label": "Kyticový dort",
     "ar": "1/1.0",
@@ -225,6 +252,7 @@ const galleryItems = [
     "caption": "Kyticový dort"
   },
   {
+    "id": "g29",
     "cat": "prodejna",
     "label": "Posezení u nás",
     "ar": "1/1.333",
@@ -233,6 +261,7 @@ const galleryItems = [
     "caption": "Posezení u nás"
   },
   {
+    "id": "g30",
     "cat": "sezona",
     "label": "Jarní kolekce",
     "ar": "1/0.891",
@@ -241,6 +270,7 @@ const galleryItems = [
     "caption": "Jarní kolekce"
   },
   {
+    "id": "g31",
     "cat": "klasika",
     "label": "Ovocné tartaletky",
     "ar": "1/1.333",
@@ -249,6 +279,7 @@ const galleryItems = [
     "caption": "Ovocné tartaletky"
   },
   {
+    "id": "g32",
     "cat": "zakazka",
     "label": "Firemní logo",
     "ar": "1/1.25",
@@ -257,6 +288,7 @@ const galleryItems = [
     "caption": "Firemní logo"
   },
   {
+    "id": "g33",
     "cat": "prodejna",
     "label": "Káva u okna",
     "ar": "1/1.333",
@@ -265,6 +297,7 @@ const galleryItems = [
     "caption": "Káva u okna"
   },
   {
+    "id": "g34",
     "cat": "sezona",
     "label": "Valentýnský vzor",
     "ar": "1/1.25",
@@ -273,6 +306,7 @@ const galleryItems = [
     "caption": "Valentýnský vzor"
   },
   {
+    "id": "g35",
     "cat": "klasika",
     "label": "Čokoládový dort",
     "ar": "1/1.327",
@@ -281,6 +315,7 @@ const galleryItems = [
     "caption": "Čokoládový dort"
   },
   {
+    "id": "g36",
     "cat": "zakazka",
     "label": "Klubové logo",
     "ar": "1/0.75",
@@ -289,6 +324,7 @@ const galleryItems = [
     "caption": "Klubové logo"
   },
   {
+    "id": "g37",
     "cat": "prodejna",
     "label": "Latte a makronky",
     "ar": "1/1.333",
@@ -297,6 +333,7 @@ const galleryItems = [
     "caption": "Latte a makronky"
   },
   {
+    "id": "g38",
     "cat": "sezona",
     "label": "Valentýnská fialová",
     "ar": "1/1.25",
@@ -305,6 +342,7 @@ const galleryItems = [
     "caption": "Valentýnská fialová"
   },
   {
+    "id": "g39",
     "cat": "klasika",
     "label": "Jahodový řezík",
     "ar": "1/1.333",
@@ -313,6 +351,7 @@ const galleryItems = [
     "caption": "Jahodový řezík"
   },
   {
+    "id": "g40",
     "cat": "zakazka",
     "label": "Party dezerty",
     "ar": "1/1.0",
@@ -321,6 +360,7 @@ const galleryItems = [
     "caption": "Party dezerty"
   },
   {
+    "id": "g41",
     "cat": "prodejna",
     "label": "Káva pro dva",
     "ar": "1/1.333",
@@ -329,6 +369,7 @@ const galleryItems = [
     "caption": "Káva pro dva"
   },
   {
+    "id": "g42",
     "cat": "sezona",
     "label": "LOVE makronky",
     "ar": "1/1.25",
@@ -337,6 +378,7 @@ const galleryItems = [
     "caption": "LOVE makronky"
   },
   {
+    "id": "g43",
     "cat": "klasika",
     "label": "Růžové makronky",
     "ar": "1/1.779",
@@ -345,6 +387,7 @@ const galleryItems = [
     "caption": "Růžové makronky"
   },
   {
+    "id": "g44",
     "cat": "zakazka",
     "label": "Zelenobílá věž",
     "ar": "1/1.333",
@@ -353,6 +396,7 @@ const galleryItems = [
     "caption": "Zelenobílá věž"
   },
   {
+    "id": "g45",
     "cat": "prodejna",
     "label": "Naše prodejna zvenku",
     "ar": "1/1.333",
@@ -361,6 +405,7 @@ const galleryItems = [
     "caption": "Naše prodejna zvenku"
   },
   {
+    "id": "g46",
     "cat": "sezona",
     "label": "Srdíčkové dezerty",
     "ar": "1/1.333",
@@ -369,6 +414,7 @@ const galleryItems = [
     "caption": "Srdíčkové dezerty"
   },
   {
+    "id": "g47",
     "cat": "klasika",
     "label": "Oříškové tartaletky",
     "ar": "1/1.333",
@@ -377,6 +423,7 @@ const galleryItems = [
     "caption": "Oříškové tartaletky"
   },
   {
+    "id": "g48",
     "cat": "zakazka",
     "label": "Narozeninová věž",
     "ar": "1/1.25",
@@ -385,6 +432,7 @@ const galleryItems = [
     "caption": "Narozeninová věž"
   },
   {
+    "id": "g49",
     "cat": "prodejna",
     "label": "Naše káva",
     "ar": "1/1.333",
@@ -393,6 +441,7 @@ const galleryItems = [
     "caption": "Naše káva"
   },
   {
+    "id": "g50",
     "cat": "sezona",
     "label": "Čokoládová srdíčka",
     "ar": "1/1.333",
@@ -401,6 +450,7 @@ const galleryItems = [
     "caption": "Čokoládová srdíčka"
   },
   {
+    "id": "g51",
     "cat": "klasika",
     "label": "Červenobílé makronky",
     "ar": "1/1.333",
@@ -409,6 +459,7 @@ const galleryItems = [
     "caption": "Červenobílé makronky"
   },
   {
+    "id": "g52",
     "cat": "zakazka",
     "label": "Klubové logo",
     "ar": "1/1.25",
@@ -417,6 +468,7 @@ const galleryItems = [
     "caption": "Klubové logo"
   },
   {
+    "id": "g53",
     "cat": "prodejna",
     "label": "U pultu",
     "ar": "1/1.333",
@@ -425,6 +477,7 @@ const galleryItems = [
     "caption": "U pultu"
   },
   {
+    "id": "g54",
     "cat": "sezona",
     "label": "Valentýnské balení",
     "ar": "1/1.333",
@@ -433,6 +486,7 @@ const galleryItems = [
     "caption": "Valentýnské balení"
   },
   {
+    "id": "g55",
     "cat": "klasika",
     "label": "Čokoládové kopulky",
     "ar": "1/1.0",
@@ -441,6 +495,7 @@ const galleryItems = [
     "caption": "Čokoládové kopulky"
   },
   {
+    "id": "g56",
     "cat": "zakazka",
     "label": "Svatební věž",
     "ar": "1/1.0",
@@ -449,6 +504,7 @@ const galleryItems = [
     "caption": "Svatební věž"
   },
   {
+    "id": "g57",
     "cat": "prodejna",
     "label": "Latte a dezert",
     "ar": "1/1.333",
@@ -457,6 +513,7 @@ const galleryItems = [
     "caption": "Latte a dezert"
   },
   {
+    "id": "g58",
     "cat": "sezona",
     "label": "Srdcový dort",
     "ar": "1/1.333",
@@ -465,6 +522,7 @@ const galleryItems = [
     "caption": "Srdcový dort"
   },
   {
+    "id": "g59",
     "cat": "klasika",
     "label": "S čokoládovou polevou",
     "ar": "1/0.881",
@@ -473,6 +531,7 @@ const galleryItems = [
     "caption": "S čokoládovou polevou"
   },
   {
+    "id": "g60",
     "cat": "zakazka",
     "label": "Rozlučka se svobodou",
     "ar": "1/1.0",
@@ -481,6 +540,7 @@ const galleryItems = [
     "caption": "Rozlučka se svobodou"
   },
   {
+    "id": "g61",
     "cat": "prodejna",
     "label": "Terasa v létě",
     "ar": "1/1.333",
@@ -489,6 +549,7 @@ const galleryItems = [
     "caption": "Terasa v létě"
   },
   {
+    "id": "g62",
     "cat": "sezona",
     "label": "Slavnostní příležitost",
     "ar": "1/1.333",
@@ -497,6 +558,7 @@ const galleryItems = [
     "caption": "Slavnostní příležitost"
   },
   {
+    "id": "g63",
     "cat": "klasika",
     "label": "Makronky ke kávě",
     "ar": "1/1.333",
@@ -505,6 +567,7 @@ const galleryItems = [
     "caption": "Makronky ke kávě"
   },
   {
+    "id": "g64",
     "cat": "zakazka",
     "label": "Rozlučka se svobodou",
     "ar": "1/1.25",
@@ -513,6 +576,7 @@ const galleryItems = [
     "caption": "Rozlučka se svobodou"
   },
   {
+    "id": "g65",
     "cat": "prodejna",
     "label": "Čerstvé pečivo",
     "ar": "1/1.333",
@@ -521,6 +585,7 @@ const galleryItems = [
     "caption": "Čerstvé pečivo"
   },
   {
+    "id": "g66",
     "cat": "klasika",
     "label": "S levandulí",
     "ar": "1/1.251",
@@ -529,6 +594,7 @@ const galleryItems = [
     "caption": "S levandulí"
   },
   {
+    "id": "g67",
     "cat": "zakazka",
     "label": "Logo na zakázku",
     "ar": "1/1.333",
@@ -537,6 +603,7 @@ const galleryItems = [
     "caption": "Logo na zakázku"
   },
   {
+    "id": "g68",
     "cat": "prodejna",
     "label": "Naše výloha",
     "ar": "1/1.333",
@@ -545,6 +612,7 @@ const galleryItems = [
     "caption": "Naše výloha"
   },
   {
+    "id": "g69",
     "cat": "klasika",
     "label": "Tyrkysové makronky",
     "ar": "1/1.0",
@@ -553,6 +621,7 @@ const galleryItems = [
     "caption": "Tyrkysové makronky"
   },
   {
+    "id": "g70",
     "cat": "zakazka",
     "label": "Slavnostní věž",
     "ar": "1/0.896",
@@ -561,6 +630,7 @@ const galleryItems = [
     "caption": "Slavnostní věž"
   },
   {
+    "id": "g71",
     "cat": "prodejna",
     "label": "Osvěžení na terase",
     "ar": "1/1.333",
@@ -569,6 +639,7 @@ const galleryItems = [
     "caption": "Osvěžení na terase"
   },
   {
+    "id": "g72",
     "cat": "klasika",
     "label": "Makronka mezi tulipány",
     "ar": "1/1.333",
@@ -577,6 +648,7 @@ const galleryItems = [
     "caption": "Makronka mezi tulipány"
   },
   {
+    "id": "g73",
     "cat": "zakazka",
     "label": "Narozeninová věž",
     "ar": "1/1.0",
@@ -585,6 +657,7 @@ const galleryItems = [
     "caption": "Narozeninová věž"
   },
   {
+    "id": "g74",
     "cat": "klasika",
     "label": "Cake pops",
     "ar": "1/1.0",
@@ -593,6 +666,7 @@ const galleryItems = [
     "caption": "Cake pops"
   },
   {
+    "id": "g75",
     "cat": "zakazka",
     "label": "Klubové logo",
     "ar": "1/1.25",
@@ -601,6 +675,7 @@ const galleryItems = [
     "caption": "Klubové logo"
   },
   {
+    "id": "g76",
     "cat": "klasika",
     "label": "Bílé se zlatem",
     "ar": "1/1.25",
@@ -609,6 +684,7 @@ const galleryItems = [
     "caption": "Bílé se zlatem"
   },
   {
+    "id": "g77",
     "cat": "zakazka",
     "label": "Makronková věž",
     "ar": "1/1.333",
@@ -617,6 +693,7 @@ const galleryItems = [
     "caption": "Makronková věž"
   },
   {
+    "id": "g78",
     "cat": "klasika",
     "label": "Pastelové makronky",
     "ar": "1/0.867",
@@ -625,6 +702,7 @@ const galleryItems = [
     "caption": "Pastelové makronky"
   },
   {
+    "id": "g79",
     "cat": "zakazka",
     "label": "Klubové logo",
     "ar": "1/1.25",
@@ -633,6 +711,7 @@ const galleryItems = [
     "caption": "Klubové logo"
   },
   {
+    "id": "g80",
     "cat": "klasika",
     "label": "Krémové pohárky",
     "ar": "1/1.0",
@@ -641,6 +720,7 @@ const galleryItems = [
     "caption": "Krémové pohárky"
   },
   {
+    "id": "g81",
     "cat": "zakazka",
     "label": "Narozeninová oslava",
     "ar": "1/0.878",
@@ -649,6 +729,7 @@ const galleryItems = [
     "caption": "Narozeninová oslava"
   },
   {
+    "id": "g82",
     "cat": "klasika",
     "label": "Purpurové makronky",
     "ar": "1/1.001",
@@ -657,6 +738,7 @@ const galleryItems = [
     "caption": "Purpurové makronky"
   },
   {
+    "id": "g83",
     "cat": "zakazka",
     "label": "Osobní věnování",
     "ar": "1/0.886",
@@ -665,6 +747,7 @@ const galleryItems = [
     "caption": "Osobní věnování"
   },
   {
+    "id": "g84",
     "cat": "klasika",
     "label": "Barevný mix",
     "ar": "1/0.8",
@@ -673,6 +756,7 @@ const galleryItems = [
     "caption": "Barevný mix"
   },
   {
+    "id": "g85",
     "cat": "zakazka",
     "label": "Svatební věž",
     "ar": "1/1.333",
@@ -681,6 +765,7 @@ const galleryItems = [
     "caption": "Svatební věž"
   },
   {
+    "id": "g86",
     "cat": "klasika",
     "label": "Crème brûlée styl",
     "ar": "1/0.875",
@@ -689,6 +774,7 @@ const galleryItems = [
     "caption": "Crème brûlée styl"
   },
   {
+    "id": "g87",
     "cat": "zakazka",
     "label": "Dárky pro hosty",
     "ar": "1/1.0",
@@ -697,6 +783,7 @@ const galleryItems = [
     "caption": "Dárky pro hosty"
   },
   {
+    "id": "g88",
     "cat": "klasika",
     "label": "Růžové s tečkami",
     "ar": "1/1.0",
@@ -705,6 +792,7 @@ const galleryItems = [
     "caption": "Růžové s tečkami"
   },
   {
+    "id": "g89",
     "cat": "zakazka",
     "label": "Slavnostní věž",
     "ar": "1/0.982",
@@ -713,6 +801,7 @@ const galleryItems = [
     "caption": "Slavnostní věž"
   },
   {
+    "id": "g90",
     "cat": "klasika",
     "label": "Se skořicí",
     "ar": "1/1.25",
@@ -721,6 +810,7 @@ const galleryItems = [
     "caption": "Se skořicí"
   },
   {
+    "id": "g91",
     "cat": "zakazka",
     "label": "Klubové logo",
     "ar": "1/1.333",
@@ -729,6 +819,7 @@ const galleryItems = [
     "caption": "Klubové logo"
   },
   {
+    "id": "g92",
     "cat": "klasika",
     "label": "Kopulky s mandlemi",
     "ar": "1/1.333",
@@ -737,6 +828,7 @@ const galleryItems = [
     "caption": "Kopulky s mandlemi"
   },
   {
+    "id": "g93",
     "cat": "zakazka",
     "label": "Lízátka na zakázku",
     "ar": "1/0.992",
@@ -745,6 +837,7 @@ const galleryItems = [
     "caption": "Lízátka na zakázku"
   },
   {
+    "id": "g94",
     "cat": "klasika",
     "label": "Pastelové bonbony",
     "ar": "1/1.0",
@@ -753,6 +846,7 @@ const galleryItems = [
     "caption": "Pastelové bonbony"
   },
   {
+    "id": "g95",
     "cat": "zakazka",
     "label": "Ombré věž",
     "ar": "1/1.5",
@@ -761,6 +855,7 @@ const galleryItems = [
     "caption": "Ombré věž"
   },
   {
+    "id": "g96",
     "cat": "klasika",
     "label": "Mousse dezerty",
     "ar": "1/1.0",
@@ -769,6 +864,7 @@ const galleryItems = [
     "caption": "Mousse dezerty"
   },
   {
+    "id": "g97",
     "cat": "zakazka",
     "label": "Svatební věž",
     "ar": "1/1.0",
@@ -777,6 +873,7 @@ const galleryItems = [
     "caption": "Svatební věž"
   },
   {
+    "id": "g98",
     "cat": "klasika",
     "label": "Čokoládový dort",
     "ar": "1/1.333",
@@ -785,6 +882,7 @@ const galleryItems = [
     "caption": "Čokoládový dort"
   },
   {
+    "id": "g99",
     "cat": "zakazka",
     "label": "Vlastní etikety",
     "ar": "1/1.333",
@@ -792,6 +890,4 @@ const galleryItems = [
     "alt": "Krabičky s makronkami a vlastními etiketami",
     "caption": "Vlastní etikety"
   }
-];
-
-export default galleryItems;
+]

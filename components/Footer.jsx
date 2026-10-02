@@ -41,6 +41,7 @@ export default function Footer({ withKontaktId = false }) {
             <h4>Navigace</h4>
             <ul className="footer-links">
               <li><Link href="/">Domů</Link></li>
+              <li><Link href="/nabidka">Nabídka</Link></li>
               <li><Link href="/galerie">Galerie</Link></li>
               <li><Link href="/#prodejna">Prodejna</Link></li>
               <li><Link href="/#objednavka">Objednávka na zakázku</Link></li>

@@ -45,6 +45,7 @@ export default function Header() {
             </svg>
           </button>
           <Link href="/" onClick={closeNav}>Domů</Link>
+          <Link href="/nabidka" onClick={closeNav}>Nabídka</Link>
           <Link href="/galerie" onClick={closeNav}>Galerie</Link>
           <Link href="/#prodejna" onClick={closeNav}>Prodejna</Link>
           <Link href="/#objednavka" onClick={closeNav}>Objednávka</Link>

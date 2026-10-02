@@ -1,0 +1,20 @@
+[
+  {
+    "id": "m1",
+    "category": "Klasické makronky",
+    "name": "Francouzské makronky",
+    "price": "45 Kč / ks",
+    "flavors": "Vanilka, malina, pistácie, čokoláda, slaný karamel",
+    "description": "Naše základní řada — vyberte si z klasických i sezónních příchutí.",
+    "photo": "/images/photos/klasika-makronky-pistacie.jpg"
+  },
+  {
+    "id": "m2",
+    "category": "Na zakázku",
+    "name": "Makronková věž",
+    "price": "od 890 Kč",
+    "flavors": "Dle výběru, barevně i chuťově na míru",
+    "description": "Oblíbená ozdoba na oslavy a svatby, počet pater a makronek podle velikosti akce.",
+    "photo": "/images/photos/zakazka-vez-oslava.jpg"
+  }
+]

@@ -866,3 +866,203 @@ section{ padding: 64px 0; }
   font-size:.92rem;
   font-weight:600;
 }
+
+/* =========================================================
+   NABÍDKA / CENÍK
+   ========================================================= */
+.menu-category{ margin-bottom: 46px; }
+.menu-category:last-child{ margin-bottom: 0; }
+.menu-category h2{
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  border-bottom: 2px solid var(--pink-light);
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+}
+.menu-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+@media (min-width: 700px){
+  .menu-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+.menu-card{
+  display:flex;
+  gap: 16px;
+  background: var(--pink-lighter);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  align-items:flex-start;
+}
+.menu-card img{
+  width: 84px; height: 84px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex: none;
+}
+.menu-card-body{ flex:1; min-width:0; }
+.menu-card-top{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  align-items:baseline;
+  flex-wrap:wrap;
+}
+.menu-card-top h3{ font-size: 1.05rem; margin:0; }
+.menu-card-price{
+  font-weight:800;
+  color: var(--pink-dark);
+  white-space: nowrap;
+  font-size:.98rem;
+}
+.menu-card-flavors{ font-size:.86rem; color: var(--ink-soft); margin: 4px 0 0; }
+.menu-card-desc{ font-size:.86rem; color: var(--ink-soft); margin: 6px 0 0; }
+.menu-empty{
+  text-align:center;
+  color: var(--ink-soft);
+  background: var(--pink-lighter);
+  border-radius: var(--radius-md);
+  padding: 30px 20px;
+}
+
+/* =========================================================
+   ADMINISTRACE
+   ========================================================= */
+.admin-login-wrap{
+  min-height: 90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--pink-lighter);
+  padding: 20px;
+}
+.admin-login-box{
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pink);
+  padding: 34px 28px;
+  width: 100%;
+  max-width: 360px;
+  text-align:center;
+}
+.admin-login-box h1{ font-size: 1.4rem; margin-bottom: 8px; }
+.admin-hint{ font-size:.88rem; color: var(--ink-soft); }
+.admin-login-box input{
+  width:100%;
+  border: 1.5px solid rgba(53,19,36,.15);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 1rem;
+  margin: 16px 0;
+  text-align:center;
+}
+.admin-login-box .btn{ width:100%; }
+.admin-error{ color:#c23; font-size:.86rem; font-weight:700; margin: 6px 0; }
+
+.admin-wrap{ max-width: 980px; margin: 0 auto; padding: 24px 20px 60px; }
+.admin-topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: 22px;
+  flex-wrap:wrap; gap: 10px;
+}
+.admin-tabs{ display:flex; gap:10px; margin-bottom: 26px; flex-wrap:wrap; }
+.admin-tabs button{
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(53,19,36,.15);
+  background: var(--white);
+  font-weight:700;
+  cursor:pointer;
+  font-size:.92rem;
+}
+.admin-tabs button.is-active{ background: var(--pink); border-color: var(--pink); color: var(--white); }
+
+.admin-panel{ display:grid; gap: 30px; }
+@media (min-width: 900px){
+  .admin-panel{ grid-template-columns: 380px 1fr; align-items:start; }
+}
+.admin-form{
+  background: var(--pink-lighter);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+.admin-form h3{ font-size: 1.1rem; margin-bottom: 16px; }
+.admin-field{ margin-bottom: 14px; }
+.admin-field label{ display:block; font-weight:700; font-size:.85rem; margin-bottom:6px; color: var(--plum); }
+.admin-field input, .admin-field select, .admin-field textarea{
+  width:100%;
+  border: 1.5px solid rgba(53,19,36,.15);
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-family: var(--font-body);
+  font-size: .94rem;
+  color: var(--ink);
+}
+.admin-row{ display:grid; gap: 14px; }
+@media (min-width: 520px){ .admin-row{ grid-template-columns: 1fr 1fr; } }
+.admin-actions{ display:flex; gap: 10px; margin-top: 6px; flex-wrap:wrap; }
+.admin-uploader{ display:flex; gap: 14px; align-items:center; }
+.admin-uploader-preview{ width:72px; height:72px; border-radius: var(--radius-sm); object-fit:cover; flex:none; }
+.admin-uploader-empty{
+  width:72px; height:72px; border-radius: var(--radius-sm);
+  background: var(--pink-light);
+  display:flex; align-items:center; justify-content:center;
+  font-size:.7rem; color: var(--pink-dark); text-align:center; flex:none;
+}
+
+.admin-list h3{ font-size: 1.1rem; margin-bottom: 14px; }
+.admin-list-header{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 14px; }
+.admin-list-header select{
+  border: 1.5px solid rgba(53,19,36,.15);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size:.86rem;
+}
+.admin-list-item{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  border: 1px solid rgba(53,19,36,.08);
+  margin-bottom: 10px;
+}
+.admin-list-item img{ width:56px; height:56px; border-radius: var(--radius-sm); object-fit:cover; flex:none; }
+.admin-list-item-info{ flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; font-size:.88rem; }
+.admin-list-item-info .muted{ color: var(--ink-soft); }
+.admin-list-item-actions{ display:flex; gap:8px; flex-wrap:wrap; }
+
+.admin-gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+}
+.admin-gallery-tile{
+  border-radius: var(--radius-sm);
+  overflow:hidden;
+  background: var(--white);
+  border: 1px solid rgba(53,19,36,.08);
+}
+.admin-gallery-tile img{ width:100%; aspect-ratio: 1/1; object-fit:cover; display:block; }
+.admin-gallery-tile-info{
+  padding: 8px 10px;
+  display:flex; flex-direction:column; gap:6px;
+  font-size:.8rem;
+}
+
+.btn-danger{
+  background: transparent;
+  border: 2px solid #c23;
+  color: #c23;
+}
+.btn-danger:hover{ background:#c23; color: var(--white); }
+.btn-sm{ padding: 8px 16px; font-size:.82rem; }
+
+.admin-footnote{
+  text-align:center;
+  color: var(--ink-soft);
+  font-size:.82rem;
+  margin-top: 30px;
+}

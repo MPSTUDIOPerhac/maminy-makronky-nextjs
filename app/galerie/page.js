@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GalleryClient from "@/components/GalleryClient";
-import galleryItems from "@/lib/gallery-data";
+import galleryItems from "@/content/gallery.json";
 
 export const metadata = {
   title: "Galerie — Máminy Makronky",
