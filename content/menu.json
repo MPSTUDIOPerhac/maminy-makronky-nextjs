@@ -133,5 +133,14 @@
     "flavors": "",
     "description": "Klasický cheesecake s ovocným toppingem na křehkém základu.",
     "photo": ""
+  },
+  {
+    "id": "mmwajb8vy",
+    "category": "Cheesecaky",
+    "name": "Veganský cheesecake",
+    "price": "50 Kč / ks",
+    "flavors": "",
+    "description": "Rostlinná verze oblíbeného cheesecaku, krémová a bez mléčných výrobků.",
+    "photo": ""
   }
 ]
