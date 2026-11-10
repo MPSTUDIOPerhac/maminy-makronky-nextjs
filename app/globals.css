@@ -221,7 +221,13 @@ section{ padding: 64px 0; }
   border-bottom: 1px solid rgba(53,19,36,.06);
 }
 .main-nav a:hover{ color: var(--pink-dark); }
-.main-nav .btn{ margin-top: 18px; }
+.main-nav .btn{
+  align-self: center;
+  width: auto;
+  margin-top: 26px;
+  padding-left: 34px;
+  padding-right: 34px;
+}
 
 .nav-scrim{
   position: fixed; inset:0;
