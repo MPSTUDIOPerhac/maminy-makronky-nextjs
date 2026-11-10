@@ -11,7 +11,7 @@ export default function Footer({ withKontaktId = false }) {
               <img src="/images/logo.jpg" alt="Máminy Makronky — logo" />
               <strong>Máminy Makronky</strong>
             </div>
-            <p>
+            <p className="footer-about">
               Řemeslná makronkárna v Lysé nad Labem. Poctivé makronky na oslavy, ke kávě i jen tak pro radost — od
               roku 2020.
             </p>
