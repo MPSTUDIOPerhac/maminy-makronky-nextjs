@@ -160,5 +160,14 @@
     "flavors": "",
     "description": "Klasický větrník v moderní porci ve sklenici, karamelový krém a krupice.",
     "photo": ""
+  },
+  {
+    "id": "mmwajc5pn",
+    "category": "Na zakázku",
+    "name": "Dort na zakázku",
+    "price": "650 Kč",
+    "flavors": "Čokoláda, malina, jahoda, mango, borůvka, lesní plody",
+    "description": "Dort o průměru 11 cm a výšce 8 cm, na máslovém nebo mascarpone základu, v provedení srdce i kulatý tvar.",
+    "photo": ""
   }
 ]
