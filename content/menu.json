@@ -16,5 +16,14 @@
     "flavors": "Dle výběru, barevně i chuťově na míru",
     "description": "Oblíbená ozdoba na oslavy a svatby, počet pater a makronek podle velikosti akce.",
     "photo": "/images/photos/zakazka-vez-oslava.jpg"
+  },
+  {
+    "id": "mmwagg49z",
+    "category": "Test",
+    "name": "Test Makronky",
+    "price": "39 Kč / ks",
+    "flavors": "Malina, tpistácie",
+    "description": "lorem ipsum lorem ipsumlorem ipsum ipsum lorem",
+    "photo": "/images/menu/16x9-adrenalin3-mwagg202.png"
   }
 ]
