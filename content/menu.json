@@ -16,5 +16,14 @@
     "flavors": "Dle výběru, barevně i chuťově na míru",
     "description": "Oblíbená ozdoba na oslavy a svatby, počet pater a makronek podle velikosti akce.",
     "photo": "/images/photos/zakazka-vez-oslava.jpg"
+  },
+  {
+    "id": "mmwaj79w1",
+    "category": "Makronkové speciality",
+    "name": "Makronkový nanuk",
+    "price": "35 Kč / ks",
+    "flavors": "",
+    "description": "Makronkové těsto obalené v čokoládě, lehce mrazivý osvěžující dezert na tyčince.",
+    "photo": ""
   }
 ]
