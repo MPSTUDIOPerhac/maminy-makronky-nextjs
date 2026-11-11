@@ -29,7 +29,8 @@ export async function POST(request) {
     alt: body.alt || body.label || "",
     caption: body.caption || body.label || "",
   };
-  items.push(newItem);
+  // Nové fotky dáváme na začátek pole, aby se v galerii zobrazovaly jako první (nejnovější nahoře).
+  items.unshift(newItem);
   await writeJSON(GALLERY_PATH, items, `Galerie: přidána fotka „${newItem.label}“`);
   return NextResponse.json({ item: newItem });
 }
