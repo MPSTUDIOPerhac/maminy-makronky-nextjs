@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Nahrávání fotky — vybere se soubor, rovnou se pošle na server
@@ -12,6 +12,13 @@ export default function ImageUploader({ folder, value, onUploaded, label = "Fotk
   const [preview, setPreview] = useState(value || "");
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+
+  // Komponenta se v adminu znovupoužívá pro různé položky (např. při kliknutí
+  // na "Upravit" u jiné položky nabídky), takže náhled musíme vždy sesynchronizovat
+  // s aktuální hodnotou zvenčí — jinak zůstává zobrazená fotka od dříve editované položky.
+  useEffect(() => {
+    setPreview(value || "");
+  }, [value]);
 
   async function handleFileChange(e) {
     const file = e.target.files?.[0];
